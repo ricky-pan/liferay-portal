@@ -14,9 +14,12 @@
 
 package com.liferay.portal.dao.orm.hibernate;
 
+import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.dao.orm.ORMException;
 import com.liferay.portal.kernel.dao.orm.ObjectNotFoundException;
 import com.liferay.portal.kernel.model.BaseModel;
+import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.model.impl.UserImpl;
 
 import org.hibernate.Session;
 import org.hibernate.StaleObjectStateException;
@@ -44,12 +47,38 @@ public class ExceptionTranslator {
 			Object currentObject = session.get(
 				object.getClass(), baseModel.getPrimaryKeyObj());
 
+			if (object instanceof UserImpl) {
+				object = _obfuscate(object);
+				currentObject = _obfuscate(currentObject);
+			}
+
 			return new ORMException(
 				object + " is stale in comparison to " + currentObject, e);
 		}
 		else {
 			return new ORMException(e);
 		}
+	}
+
+	private static User _obfuscate(Object object) {
+
+		User user = (User)object;
+
+		user.setPassword(StringPool.EIGHT_STARS);
+		user.setDigest(StringPool.EIGHT_STARS);
+		user.setReminderQueryQuestion(StringPool.EIGHT_STARS);
+		user.setReminderQueryAnswer(StringPool.EIGHT_STARS);
+		user.setScreenName(StringPool.EIGHT_STARS);
+		user.setEmailAddress(StringPool.EIGHT_STARS);
+		user.setFacebookId((user.getFacebookId() != 0) ? 0 : -1);
+		user.setGoogleUserId(StringPool.EIGHT_STARS);
+		user.setGreeting(StringPool.EIGHT_STARS);
+		user.setFirstName(StringPool.EIGHT_STARS);
+		user.setMiddleName(StringPool.EIGHT_STARS);
+		user.setLastName(StringPool.EIGHT_STARS);
+		user.setJobTitle(StringPool.EIGHT_STARS);
+
+		return user;
 	}
 
 }
