@@ -124,6 +124,10 @@
 		<priority value="ERROR" />
 	</category>
 
+	<category name="com.liferay.portal.dao.orm.hibernate.ExceptionTranslator">
+		<priority value="ERROR" />
+	</category>
+
 	<category name="com.liferay.portal.dao.orm.hibernate.SessionFactoryImpl">
 		<priority value="ERROR" />
 	</category>

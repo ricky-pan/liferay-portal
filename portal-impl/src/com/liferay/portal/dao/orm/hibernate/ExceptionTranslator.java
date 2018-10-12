@@ -17,6 +17,8 @@ package com.liferay.portal.dao.orm.hibernate;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.dao.orm.ORMException;
 import com.liferay.portal.kernel.dao.orm.ObjectNotFoundException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.BaseModel;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.model.impl.UserImpl;
@@ -47,7 +49,7 @@ public class ExceptionTranslator {
 			Object currentObject = session.get(
 				object.getClass(), baseModel.getPrimaryKeyObj());
 
-			if (object instanceof UserImpl) {
+			if (object instanceof UserImpl && _log.isDebugEnabled()) {
 				object = _obfuscate(object);
 				currentObject = _obfuscate(currentObject);
 			}
@@ -81,4 +83,5 @@ public class ExceptionTranslator {
 		return user;
 	}
 
+	private static final Log _log = LogFactoryUtil.getLog(ExceptionTranslator.class);
 }
