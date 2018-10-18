@@ -525,6 +525,20 @@ public class DefaultExportImportContentProcessorTest {
 	}
 
 	@Test
+	public void testExportLinksToURLSWithStopCharacters() throws Exception {
+		String path = RandomTestUtil.randomString();
+
+		String content = getContent("url_links.txt");
+		content = content.replaceAll("PATH", path);
+
+		content = _exportImportContentProcessor.replaceExportContentReferences(
+			_portletDataContextExport, _referrerStagedModel, content, true,
+			true);
+
+		_assertContainsPathWithStopCharacters(content, path);
+	}
+
+	@Test
 	public void testExportLinksToUserLayouts() throws Exception {
 		User user = TestPropsValues.getUser();
 
@@ -1172,6 +1186,25 @@ public class DefaultExportImportContentProcessorTest {
 			entriesStream.anyMatch(entry -> entry.endsWith(expected)));
 	}
 
+	private void _assertContainsPathWithStopCharacters(
+		String content, String path) {
+
+		for (char stopChar: _LAYOUT_REFERENCE_STOP_CHARS) {
+			StringBundler sb = new StringBundler();
+
+			sb.append(path);
+			sb.append(StringPool.SLASH);
+			sb.append(stopChar);
+			sb.append(StringPool.SLASH);
+
+			Assert.assertTrue(
+				String.format(
+					"%s does not contain the path %s",
+					content, sb.toString()
+				), content.contains(sb.toString()));
+		}
+	}
+
 	private static final String[] _EXTERNAL_GROUP_FRIENDLY_URL_VARIABLES = {
 		"[$EXTERNAL_GROUP_FRIENDLY_URL$]",
 		"[$EXTERNAL_PRIVATE_LAYOUT_FRIENDLY_URL$]",
@@ -1181,6 +1214,13 @@ public class DefaultExportImportContentProcessorTest {
 	private static final String[] _GROUP_FRIENDLY_URL_VARIABLES = {
 		"[$GROUP_FRIENDLY_URL$]", "[$PRIVATE_LAYOUT_FRIENDLY_URL$]",
 		"[$PUBLIC_LAYOUT_FRIENDLY_URL$]"
+	};
+
+	private static final char[] _LAYOUT_REFERENCE_STOP_CHARS = {
+		CharPool.APOSTROPHE, CharPool.CLOSE_BRACKET, CharPool.CLOSE_CURLY_BRACE,
+		CharPool.CLOSE_PARENTHESIS, CharPool.GREATER_THAN, CharPool.LESS_THAN,
+		CharPool.PIPE, CharPool.POUND, CharPool.QUESTION, CharPool.QUOTE,
+		CharPool.SPACE
 	};
 
 	private static final String[] _MULTI_LOCALE_LAYOUT_VARIABLES = {
