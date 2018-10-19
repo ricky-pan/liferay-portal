@@ -529,6 +529,7 @@ public class DefaultExportImportContentProcessorTest {
 		String path = RandomTestUtil.randomString();
 
 		String content = getContent("url_links.txt");
+
 		content = content.replaceAll("PATH", path);
 
 		content = _exportImportContentProcessor.replaceExportContentReferences(
@@ -1172,6 +1173,24 @@ public class DefaultExportImportContentProcessorTest {
 			entriesStream.anyMatch(pattern.asPredicate()));
 	}
 
+	private void _assertContainsPathWithStopCharacters(
+		String content, String path) {
+
+		for (char stopChar : _LAYOUT_REFERENCE_STOP_CHARS) {
+			StringBundler sb = new StringBundler(4);
+
+			sb.append(path);
+			sb.append(StringPool.SLASH);
+			sb.append(stopChar);
+			sb.append(StringPool.SLASH);
+
+			Assert.assertTrue(
+				String.format(
+					"%s does not contain the path %s", content,
+					sb.toString()), content.contains(sb.toString()));
+		}
+	}
+
 	private void _assertContainsReference(
 		List<String> entries, String className, long classPK) {
 
@@ -1184,25 +1203,6 @@ public class DefaultExportImportContentProcessorTest {
 				"%s does not contain an entry for %s with primary key %s",
 				entries.toString(), className, classPK),
 			entriesStream.anyMatch(entry -> entry.endsWith(expected)));
-	}
-
-	private void _assertContainsPathWithStopCharacters(
-		String content, String path) {
-
-		for (char stopChar: _LAYOUT_REFERENCE_STOP_CHARS) {
-			StringBundler sb = new StringBundler();
-
-			sb.append(path);
-			sb.append(StringPool.SLASH);
-			sb.append(stopChar);
-			sb.append(StringPool.SLASH);
-
-			Assert.assertTrue(
-				String.format(
-					"%s does not contain the path %s",
-					content, sb.toString()
-				), content.contains(sb.toString()));
-		}
 	}
 
 	private static final String[] _EXTERNAL_GROUP_FRIENDLY_URL_VARIABLES = {
