@@ -17,6 +17,7 @@ package com.liferay.portal.dao.orm.hibernate;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.dao.orm.ORMException;
 import com.liferay.portal.kernel.dao.orm.ObjectNotFoundException;
+import com.liferay.portal.kernel.json.JSONSerializable;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.BaseModel;
@@ -25,6 +26,8 @@ import com.liferay.portal.model.impl.UserImpl;
 
 import org.hibernate.Session;
 import org.hibernate.StaleObjectStateException;
+import org.jabsorb.JSONSerializer;
+import org.jabsorb.serializer.MarshallException;
 
 /**
  * @author Brian Wing Shun Chan
@@ -49,17 +52,18 @@ public class ExceptionTranslator {
 			Object currentObject = session.get(
 				object.getClass(), baseModel.getPrimaryKeyObj());
 
-			if (object instanceof UserImpl && _log.isDebugEnabled()) {
-				object = _obfuscate(object);
-				currentObject = _obfuscate(currentObject);
+			try {
+				Object jsonObject = _jsonSerializer.toJSON(object);
+				Object currJsonObject = _jsonSerializer.toJSON(currentObject);
+				return new ORMException(
+					jsonObject + " is stale in comparison to " + currJsonObject, e);
 			}
+			catch (MarshallException e1) {
+				e1.printStackTrace();
+			}
+		}
 
-			return new ORMException(
-				object + " is stale in comparison to " + currentObject, e);
-		}
-		else {
-			return new ORMException(e);
-		}
+		return new ORMException(e);
 	}
 
 	private static User _obfuscate(Object object) {
@@ -84,4 +88,6 @@ public class ExceptionTranslator {
 	}
 
 	private static final Log _log = LogFactoryUtil.getLog(ExceptionTranslator.class);
+	private static JSONSerializer _jsonSerializer;
+
 }
