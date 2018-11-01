@@ -2019,6 +2019,90 @@ public class UserModelImpl extends BaseModelImpl<User> implements UserModel {
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(87);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", uuid=");
+		sb.append(getUuid());
+		sb.append(", externalReferenceCode=");
+		sb.append(getExternalReferenceCode());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", defaultUser=");
+		sb.append(isDefaultUser());
+		sb.append(", contactId=");
+		sb.append(getContactId());
+		sb.append(", reminderQueryQuestion=");
+		sb.append(getReminderQueryQuestion());
+		sb.append(", reminderQueryAnswer=");
+		sb.append(getReminderQueryAnswer());
+		sb.append(", graceLoginCount=");
+		sb.append(getGraceLoginCount());
+		sb.append(", screenName=");
+		sb.append(getScreenName());
+		sb.append(", emailAddress=");
+		sb.append(getEmailAddress());
+		sb.append(", facebookId=");
+		sb.append(getFacebookId());
+		sb.append(", googleUserId=");
+		sb.append(getGoogleUserId());
+		sb.append(", ldapServerId=");
+		sb.append(getLdapServerId());
+		sb.append(", openId=");
+		sb.append(getOpenId());
+		sb.append(", portraitId=");
+		sb.append(getPortraitId());
+		sb.append(", languageId=");
+		sb.append(getLanguageId());
+		sb.append(", timeZoneId=");
+		sb.append(getTimeZoneId());
+		sb.append(", greeting=");
+		sb.append(getGreeting());
+		sb.append(", comments=");
+		sb.append(getComments());
+		sb.append(", firstName=");
+		sb.append(getFirstName());
+		sb.append(", middleName=");
+		sb.append(getMiddleName());
+		sb.append(", lastName=");
+		sb.append(getLastName());
+		sb.append(", jobTitle=");
+		sb.append(getJobTitle());
+		sb.append(", loginDate=");
+		sb.append(getLoginDate());
+		sb.append(", loginIP=");
+		sb.append(getLoginIP());
+		sb.append(", lastLoginDate=");
+		sb.append(getLastLoginDate());
+		sb.append(", lastLoginIP=");
+		sb.append(getLastLoginIP());
+		sb.append(", lastFailedLoginDate=");
+		sb.append(getLastFailedLoginDate());
+		sb.append(", failedLoginAttempts=");
+		sb.append(getFailedLoginAttempts());
+		sb.append(", lockout=");
+		sb.append(isLockout());
+		sb.append(", lockoutDate=");
+		sb.append(getLockoutDate());
+		sb.append(", agreedToTermsOfUse=");
+		sb.append(isAgreedToTermsOfUse());
+		sb.append(", emailAddressVerified=");
+		sb.append(isEmailAddressVerified());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(133);

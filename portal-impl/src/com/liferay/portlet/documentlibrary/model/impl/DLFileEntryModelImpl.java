@@ -1661,6 +1661,74 @@ public class DLFileEntryModelImpl extends BaseModelImpl<DLFileEntry>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(61);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", fileEntryId=");
+		sb.append(getFileEntryId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", repositoryId=");
+		sb.append(getRepositoryId());
+		sb.append(", folderId=");
+		sb.append(getFolderId());
+		sb.append(", treePath=");
+		sb.append(getTreePath());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", fileName=");
+		sb.append(getFileName());
+		sb.append(", extension=");
+		sb.append(getExtension());
+		sb.append(", mimeType=");
+		sb.append(getMimeType());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", extraSettings=");
+		sb.append(getExtraSettings());
+		sb.append(", fileEntryTypeId=");
+		sb.append(getFileEntryTypeId());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", size=");
+		sb.append(getSize());
+		sb.append(", readCount=");
+		sb.append(getReadCount());
+		sb.append(", smallImageId=");
+		sb.append(getSmallImageId());
+		sb.append(", largeImageId=");
+		sb.append(getLargeImageId());
+		sb.append(", custom1ImageId=");
+		sb.append(getCustom1ImageId());
+		sb.append(", custom2ImageId=");
+		sb.append(getCustom2ImageId());
+		sb.append(", manualCheckInRequired=");
+		sb.append(isManualCheckInRequired());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(94);

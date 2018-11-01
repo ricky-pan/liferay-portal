@@ -776,6 +776,12 @@ public class SystemEventModelImpl extends BaseModelImpl<SystemEvent>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(31);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(49);

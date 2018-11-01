@@ -715,6 +715,36 @@ public class ResourcePermissionModelImpl extends BaseModelImpl<ResourcePermissio
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(23);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", resourcePermissionId=");
+		sb.append(getResourcePermissionId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", scope=");
+		sb.append(getScope());
+		sb.append(", primKey=");
+		sb.append(getPrimKey());
+		sb.append(", primKeyId=");
+		sb.append(getPrimKeyId());
+		sb.append(", roleId=");
+		sb.append(getRoleId());
+		sb.append(", ownerId=");
+		sb.append(getOwnerId());
+		sb.append(", actionIds=");
+		sb.append(getActionIds());
+		sb.append(", viewActionId=");
+		sb.append(isViewActionId());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(37);

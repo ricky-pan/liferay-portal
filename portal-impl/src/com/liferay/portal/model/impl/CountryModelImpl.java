@@ -643,6 +643,32 @@ public class CountryModelImpl extends BaseModelImpl<Country>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(19);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", countryId=");
+		sb.append(getCountryId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", a2=");
+		sb.append(getA2());
+		sb.append(", a3=");
+		sb.append(getA3());
+		sb.append(", number=");
+		sb.append(getNumber());
+		sb.append(", idd=");
+		sb.append(getIdd());
+		sb.append(", zipRequired=");
+		sb.append(isZipRequired());
+		sb.append(", active=");
+		sb.append(isActive());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(31);

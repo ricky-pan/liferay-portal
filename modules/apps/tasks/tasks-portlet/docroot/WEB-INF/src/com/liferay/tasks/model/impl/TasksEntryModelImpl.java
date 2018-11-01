@@ -876,6 +876,42 @@ public class TasksEntryModelImpl extends BaseModelImpl<TasksEntry>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(29);
+
+		sb.append("{tasksEntryId=");
+		sb.append(getTasksEntryId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", priority=");
+		sb.append(getPriority());
+		sb.append(", assigneeUserId=");
+		sb.append(getAssigneeUserId());
+		sb.append(", resolverUserId=");
+		sb.append(getResolverUserId());
+		sb.append(", dueDate=");
+		sb.append(getDueDate());
+		sb.append(", finishDate=");
+		sb.append(getFinishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(46);

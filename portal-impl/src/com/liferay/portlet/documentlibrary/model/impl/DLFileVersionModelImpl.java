@@ -1478,6 +1478,70 @@ public class DLFileVersionModelImpl extends BaseModelImpl<DLFileVersion>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(57);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", fileVersionId=");
+		sb.append(getFileVersionId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", repositoryId=");
+		sb.append(getRepositoryId());
+		sb.append(", folderId=");
+		sb.append(getFolderId());
+		sb.append(", fileEntryId=");
+		sb.append(getFileEntryId());
+		sb.append(", treePath=");
+		sb.append(getTreePath());
+		sb.append(", fileName=");
+		sb.append(getFileName());
+		sb.append(", extension=");
+		sb.append(getExtension());
+		sb.append(", mimeType=");
+		sb.append(getMimeType());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", changeLog=");
+		sb.append(getChangeLog());
+		sb.append(", extraSettings=");
+		sb.append(getExtraSettings());
+		sb.append(", fileEntryTypeId=");
+		sb.append(getFileEntryTypeId());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", size=");
+		sb.append(getSize());
+		sb.append(", checksum=");
+		sb.append(getChecksum());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(88);

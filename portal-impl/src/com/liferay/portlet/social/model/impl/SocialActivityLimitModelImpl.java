@@ -626,6 +626,12 @@ public class SocialActivityLimitModelImpl extends BaseModelImpl<SocialActivityLi
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(19);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(31);

@@ -650,6 +650,32 @@ public class GadgetModelImpl extends BaseModelImpl<Gadget>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(19);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", gadgetId=");
+		sb.append(getGadgetId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", url=");
+		sb.append(getUrl());
+		sb.append(", portletCategoryNames=");
+		sb.append(getPortletCategoryNames());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(31);

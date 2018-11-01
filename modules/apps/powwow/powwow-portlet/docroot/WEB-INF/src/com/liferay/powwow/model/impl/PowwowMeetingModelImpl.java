@@ -862,6 +862,44 @@ public class PowwowMeetingModelImpl extends BaseModelImpl<PowwowMeeting>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(31);
+
+		sb.append("{powwowMeetingId=");
+		sb.append(getPowwowMeetingId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", powwowServerId=");
+		sb.append(getPowwowServerId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", providerType=");
+		sb.append(getProviderType());
+		sb.append(", providerTypeMetadata=");
+		sb.append(getProviderTypeMetadata());
+		sb.append(", languageId=");
+		sb.append(getLanguageId());
+		sb.append(", calendarBookingId=");
+		sb.append(getCalendarBookingId());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(49);

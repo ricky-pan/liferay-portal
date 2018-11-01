@@ -861,6 +861,44 @@ public class LayoutSetModelImpl extends BaseModelImpl<LayoutSet>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(31);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", layoutSetId=");
+		sb.append(getLayoutSetId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", privateLayout=");
+		sb.append(isPrivateLayout());
+		sb.append(", logoId=");
+		sb.append(getLogoId());
+		sb.append(", themeId=");
+		sb.append(getThemeId());
+		sb.append(", colorSchemeId=");
+		sb.append(getColorSchemeId());
+		sb.append(", css=");
+		sb.append(getCss());
+		sb.append(", pageCount=");
+		sb.append(getPageCount());
+		sb.append(", settings=");
+		sb.append(getSettings());
+		sb.append(", layoutSetPrototypeUuid=");
+		sb.append(getLayoutSetPrototypeUuid());
+		sb.append(", layoutSetPrototypeLinkEnabled=");
+		sb.append(isLayoutSetPrototypeLinkEnabled());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(49);

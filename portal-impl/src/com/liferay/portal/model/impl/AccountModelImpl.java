@@ -874,6 +874,48 @@ public class AccountModelImpl extends BaseModelImpl<Account>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(35);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", accountId=");
+		sb.append(getAccountId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", parentAccountId=");
+		sb.append(getParentAccountId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", legalName=");
+		sb.append(getLegalName());
+		sb.append(", legalId=");
+		sb.append(getLegalId());
+		sb.append(", legalType=");
+		sb.append(getLegalType());
+		sb.append(", sicCode=");
+		sb.append(getSicCode());
+		sb.append(", tickerSymbol=");
+		sb.append(getTickerSymbol());
+		sb.append(", industry=");
+		sb.append(getIndustry());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", size=");
+		sb.append(getSize());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(55);

@@ -582,6 +582,28 @@ public class SocialActivitySettingModelImpl extends BaseModelImpl<SocialActivity
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(15);
+
+		sb.append("{activitySettingId=");
+		sb.append(getActivitySettingId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", activityType=");
+		sb.append(getActivityType());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", value=");
+		sb.append(getValue());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(25);

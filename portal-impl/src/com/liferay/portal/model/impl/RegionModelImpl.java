@@ -520,6 +520,26 @@ public class RegionModelImpl extends BaseModelImpl<Region>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(13);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", regionId=");
+		sb.append(getRegionId());
+		sb.append(", countryId=");
+		sb.append(getCountryId());
+		sb.append(", regionCode=");
+		sb.append(getRegionCode());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", active=");
+		sb.append(isActive());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(22);

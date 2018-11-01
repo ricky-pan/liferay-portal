@@ -402,6 +402,12 @@ public class BrowserTrackerModelImpl extends BaseModelImpl<BrowserTracker>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(11);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(19);

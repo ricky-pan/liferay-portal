@@ -1706,6 +1706,68 @@ public class AssetEntryModelImpl extends BaseModelImpl<AssetEntry>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(55);
+
+		sb.append("{entryId=");
+		sb.append(getEntryId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", classUuid=");
+		sb.append(getClassUuid());
+		sb.append(", classTypeId=");
+		sb.append(getClassTypeId());
+		sb.append(", listable=");
+		sb.append(isListable());
+		sb.append(", visible=");
+		sb.append(isVisible());
+		sb.append(", startDate=");
+		sb.append(getStartDate());
+		sb.append(", endDate=");
+		sb.append(getEndDate());
+		sb.append(", publishDate=");
+		sb.append(getPublishDate());
+		sb.append(", expirationDate=");
+		sb.append(getExpirationDate());
+		sb.append(", mimeType=");
+		sb.append(getMimeType());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", summary=");
+		sb.append(getSummary());
+		sb.append(", url=");
+		sb.append(getUrl());
+		sb.append(", layoutUuid=");
+		sb.append(getLayoutUuid());
+		sb.append(", height=");
+		sb.append(getHeight());
+		sb.append(", width=");
+		sb.append(getWidth());
+		sb.append(", priority=");
+		sb.append(getPriority());
+		sb.append(", viewCount=");
+		sb.append(getViewCount());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(85);

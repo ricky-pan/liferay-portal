@@ -864,6 +864,40 @@ public class SocialRequestModelImpl extends BaseModelImpl<SocialRequest>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(27);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", requestId=");
+		sb.append(getRequestId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", extraData=");
+		sb.append(getExtraData());
+		sb.append(", receiverUserId=");
+		sb.append(getReceiverUserId());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(43);

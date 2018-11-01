@@ -553,6 +553,28 @@ public class PluginSettingModelImpl extends BaseModelImpl<PluginSetting>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(15);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", pluginSettingId=");
+		sb.append(getPluginSettingId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", pluginId=");
+		sb.append(getPluginId());
+		sb.append(", pluginType=");
+		sb.append(getPluginType());
+		sb.append(", roles=");
+		sb.append(getRoles());
+		sb.append(", active=");
+		sb.append(isActive());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(25);

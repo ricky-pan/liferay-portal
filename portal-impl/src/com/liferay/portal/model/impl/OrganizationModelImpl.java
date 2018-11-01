@@ -1035,6 +1035,52 @@ public class OrganizationModelImpl extends BaseModelImpl<Organization>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(39);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", uuid=");
+		sb.append(getUuid());
+		sb.append(", externalReferenceCode=");
+		sb.append(getExternalReferenceCode());
+		sb.append(", organizationId=");
+		sb.append(getOrganizationId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", parentOrganizationId=");
+		sb.append(getParentOrganizationId());
+		sb.append(", treePath=");
+		sb.append(getTreePath());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", recursable=");
+		sb.append(isRecursable());
+		sb.append(", regionId=");
+		sb.append(getRegionId());
+		sb.append(", countryId=");
+		sb.append(getCountryId());
+		sb.append(", statusId=");
+		sb.append(getStatusId());
+		sb.append(", comments=");
+		sb.append(getComments());
+		sb.append(", logoId=");
+		sb.append(getLogoId());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(61);

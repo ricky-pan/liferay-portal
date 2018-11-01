@@ -271,6 +271,12 @@ public class CounterModelImpl extends BaseModelImpl<Counter>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(5);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(10);

@@ -678,6 +678,12 @@ public class PowwowServerModelImpl extends BaseModelImpl<PowwowServer>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(25);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(40);

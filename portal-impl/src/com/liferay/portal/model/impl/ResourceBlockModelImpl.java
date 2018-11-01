@@ -555,6 +555,28 @@ public class ResourceBlockModelImpl extends BaseModelImpl<ResourceBlock>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(15);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", resourceBlockId=");
+		sb.append(getResourceBlockId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", permissionsHash=");
+		sb.append(getPermissionsHash());
+		sb.append(", referenceCount=");
+		sb.append(getReferenceCount());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(25);

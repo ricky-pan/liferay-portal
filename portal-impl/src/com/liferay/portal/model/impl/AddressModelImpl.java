@@ -1084,6 +1084,54 @@ public class AddressModelImpl extends BaseModelImpl<Address>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(41);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", uuid=");
+		sb.append(getUuid());
+		sb.append(", addressId=");
+		sb.append(getAddressId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", street1=");
+		sb.append(getStreet1());
+		sb.append(", street2=");
+		sb.append(getStreet2());
+		sb.append(", street3=");
+		sb.append(getStreet3());
+		sb.append(", city=");
+		sb.append(getCity());
+		sb.append(", zip=");
+		sb.append(getZip());
+		sb.append(", regionId=");
+		sb.append(getRegionId());
+		sb.append(", countryId=");
+		sb.append(getCountryId());
+		sb.append(", typeId=");
+		sb.append(getTypeId());
+		sb.append(", mailing=");
+		sb.append(isMailing());
+		sb.append(", primary=");
+		sb.append(isPrimary());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(64);

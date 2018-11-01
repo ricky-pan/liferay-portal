@@ -468,6 +468,24 @@ public class UserGroupRoleModelImpl extends BaseModelImpl<UserGroupRole>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(11);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", roleId=");
+		sb.append(getRoleId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(19);
