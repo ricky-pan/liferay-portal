@@ -1,11 +1,11 @@
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
- *
+ * <p>
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Lesser General Public License as published by the Free
  * Software Foundation; either version 2.1 of the License, or (at your option)
  * any later version.
- *
+ * <p>
  * This library is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
@@ -20,6 +20,8 @@ import com.liferay.portal.kernel.model.BaseModel;
 
 import org.hibernate.Session;
 import org.hibernate.StaleObjectStateException;
+
+import java.lang.reflect.Method;
 
 /**
  * @author Brian Wing Shun Chan
@@ -38,13 +40,23 @@ public class ExceptionTranslator {
 		Exception e, Session session, Object object) {
 
 		if (e instanceof StaleObjectStateException) {
-			BaseModel<?> baseModel = (BaseModel<?>)object;
+			BaseModel<?> baseModel = (BaseModel<?>) object;
 
 			Object currentObject = session.get(
 				object.getClass(), baseModel.getPrimaryKeyObj());
 
-			return new ORMException(
-				object + " is stale in comparison to " + currentObject, e);
+			try {
+				Method method = object.getClass().getSuperclass().getMethod(
+					"toProtectedString");
+				String objStr = (String) method.invoke(object);
+				String currObjStr = (String) method.invoke(currentObject);
+
+				return new ORMException(
+					objStr + " is stale in comparison to " + currObjStr, e);
+			}
+			catch (Exception e1) {
+				return new ORMException(e1);
+			}
 		}
 
 		return new ORMException(e);
