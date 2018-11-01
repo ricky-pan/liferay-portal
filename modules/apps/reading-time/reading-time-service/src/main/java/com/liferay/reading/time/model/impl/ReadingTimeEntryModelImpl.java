@@ -813,6 +813,32 @@ public class ReadingTimeEntryModelImpl extends BaseModelImpl<ReadingTimeEntry>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(19);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", readingTimeEntryId=");
+		sb.append(getReadingTimeEntryId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", readingTime=");
+		sb.append(getReadingTime());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(31);

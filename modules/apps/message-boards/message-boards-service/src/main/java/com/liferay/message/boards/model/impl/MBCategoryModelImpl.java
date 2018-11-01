@@ -1315,6 +1315,54 @@ public class MBCategoryModelImpl extends BaseModelImpl<MBCategory>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(41);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", categoryId=");
+		sb.append(getCategoryId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", parentCategoryId=");
+		sb.append(getParentCategoryId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", displayStyle=");
+		sb.append(getDisplayStyle());
+		sb.append(", threadCount=");
+		sb.append(getThreadCount());
+		sb.append(", messageCount=");
+		sb.append(getMessageCount());
+		sb.append(", lastPostDate=");
+		sb.append(getLastPostDate());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(64);

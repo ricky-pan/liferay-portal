@@ -1250,6 +1250,56 @@ public class LayoutPageTemplateEntryModelImpl extends BaseModelImpl<LayoutPageTe
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(43);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", layoutPageTemplateEntryId=");
+		sb.append(getLayoutPageTemplateEntryId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", layoutPageTemplateCollectionId=");
+		sb.append(getLayoutPageTemplateCollectionId());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classTypeId=");
+		sb.append(getClassTypeId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", previewFileEntryId=");
+		sb.append(getPreviewFileEntryId());
+		sb.append(", defaultTemplate=");
+		sb.append(isDefaultTemplate());
+		sb.append(", layoutPrototypeId=");
+		sb.append(getLayoutPrototypeId());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(67);

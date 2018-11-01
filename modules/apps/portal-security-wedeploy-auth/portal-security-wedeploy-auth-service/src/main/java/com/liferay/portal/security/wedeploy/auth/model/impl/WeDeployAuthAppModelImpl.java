@@ -686,6 +686,34 @@ public class WeDeployAuthAppModelImpl extends BaseModelImpl<WeDeployAuthApp>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(21);
+
+		sb.append("{weDeployAuthAppId=");
+		sb.append(getWeDeployAuthAppId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", redirectURI=");
+		sb.append(getRedirectURI());
+		sb.append(", clientId=");
+		sb.append(getClientId());
+		sb.append(", clientSecret=");
+		sb.append(getClientSecret());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(34);

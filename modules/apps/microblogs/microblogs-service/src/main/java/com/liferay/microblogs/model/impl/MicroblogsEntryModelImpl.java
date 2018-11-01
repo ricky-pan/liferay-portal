@@ -802,6 +802,38 @@ public class MicroblogsEntryModelImpl extends BaseModelImpl<MicroblogsEntry>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(25);
+
+		sb.append("{microblogsEntryId=");
+		sb.append(getMicroblogsEntryId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", creatorClassNameId=");
+		sb.append(getCreatorClassNameId());
+		sb.append(", creatorClassPK=");
+		sb.append(getCreatorClassPK());
+		sb.append(", content=");
+		sb.append(getContent());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", parentMicroblogsEntryId=");
+		sb.append(getParentMicroblogsEntryId());
+		sb.append(", socialRelationType=");
+		sb.append(getSocialRelationType());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(40);

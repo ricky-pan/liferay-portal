@@ -732,6 +732,12 @@ public class KaleoNodeModelImpl extends BaseModelImpl<KaleoNode>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(29);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(46);

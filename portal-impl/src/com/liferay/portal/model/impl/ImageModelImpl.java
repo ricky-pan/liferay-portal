@@ -540,6 +540,30 @@ public class ImageModelImpl extends BaseModelImpl<Image> implements ImageModel {
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(17);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", imageId=");
+		sb.append(getImageId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", height=");
+		sb.append(getHeight());
+		sb.append(", width=");
+		sb.append(getWidth());
+		sb.append(", size=");
+		sb.append(getSize());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(28);

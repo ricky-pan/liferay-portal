@@ -1147,6 +1147,12 @@ public class MBMailingListModelImpl extends BaseModelImpl<MBMailingList>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(53);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(82);

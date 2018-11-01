@@ -1383,6 +1383,54 @@ public class DDMStructureModelImpl extends BaseModelImpl<DDMStructure>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(41);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", structureId=");
+		sb.append(getStructureId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", versionUserId=");
+		sb.append(getVersionUserId());
+		sb.append(", versionUserName=");
+		sb.append(getVersionUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", parentStructureId=");
+		sb.append(getParentStructureId());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", structureKey=");
+		sb.append(getStructureKey());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", definition=");
+		sb.append(getDefinition());
+		sb.append(", storageType=");
+		sb.append(getStorageType());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(64);

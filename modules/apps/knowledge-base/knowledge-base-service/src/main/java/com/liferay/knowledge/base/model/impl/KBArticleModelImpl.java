@@ -1519,6 +1519,72 @@ public class KBArticleModelImpl extends BaseModelImpl<KBArticle>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(59);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", kbArticleId=");
+		sb.append(getKbArticleId());
+		sb.append(", resourcePrimKey=");
+		sb.append(getResourcePrimKey());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", rootResourcePrimKey=");
+		sb.append(getRootResourcePrimKey());
+		sb.append(", parentResourceClassNameId=");
+		sb.append(getParentResourceClassNameId());
+		sb.append(", parentResourcePrimKey=");
+		sb.append(getParentResourcePrimKey());
+		sb.append(", kbFolderId=");
+		sb.append(getKbFolderId());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", urlTitle=");
+		sb.append(getUrlTitle());
+		sb.append(", content=");
+		sb.append(getContent());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", priority=");
+		sb.append(getPriority());
+		sb.append(", sections=");
+		sb.append(getSections());
+		sb.append(", viewCount=");
+		sb.append(getViewCount());
+		sb.append(", latest=");
+		sb.append(isLatest());
+		sb.append(", main=");
+		sb.append(isMain());
+		sb.append(", sourceURL=");
+		sb.append(getSourceURL());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(91);

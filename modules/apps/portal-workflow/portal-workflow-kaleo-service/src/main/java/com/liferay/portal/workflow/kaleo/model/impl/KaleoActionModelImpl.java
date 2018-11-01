@@ -907,6 +907,12 @@ public class KaleoActionModelImpl extends BaseModelImpl<KaleoAction>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(37);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(58);

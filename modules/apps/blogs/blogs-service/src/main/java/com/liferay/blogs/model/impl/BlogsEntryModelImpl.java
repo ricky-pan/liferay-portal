@@ -1616,6 +1616,72 @@ public class BlogsEntryModelImpl extends BaseModelImpl<BlogsEntry>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(59);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", entryId=");
+		sb.append(getEntryId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", subtitle=");
+		sb.append(getSubtitle());
+		sb.append(", urlTitle=");
+		sb.append(getUrlTitle());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", content=");
+		sb.append(getContent());
+		sb.append(", displayDate=");
+		sb.append(getDisplayDate());
+		sb.append(", allowPingbacks=");
+		sb.append(isAllowPingbacks());
+		sb.append(", allowTrackbacks=");
+		sb.append(isAllowTrackbacks());
+		sb.append(", trackbacks=");
+		sb.append(getTrackbacks());
+		sb.append(", coverImageCaption=");
+		sb.append(getCoverImageCaption());
+		sb.append(", coverImageFileEntryId=");
+		sb.append(getCoverImageFileEntryId());
+		sb.append(", coverImageURL=");
+		sb.append(getCoverImageURL());
+		sb.append(", smallImage=");
+		sb.append(isSmallImage());
+		sb.append(", smallImageFileEntryId=");
+		sb.append(getSmallImageFileEntryId());
+		sb.append(", smallImageId=");
+		sb.append(getSmallImageId());
+		sb.append(", smallImageURL=");
+		sb.append(getSmallImageURL());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(91);

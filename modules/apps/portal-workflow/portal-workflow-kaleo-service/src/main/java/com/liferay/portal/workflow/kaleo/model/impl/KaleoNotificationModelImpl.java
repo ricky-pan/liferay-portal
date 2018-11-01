@@ -881,6 +881,12 @@ public class KaleoNotificationModelImpl extends BaseModelImpl<KaleoNotification>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(35);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(55);

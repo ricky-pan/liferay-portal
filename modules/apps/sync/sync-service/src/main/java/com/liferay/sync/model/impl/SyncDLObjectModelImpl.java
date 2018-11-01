@@ -1373,6 +1373,66 @@ public class SyncDLObjectModelImpl extends BaseModelImpl<SyncDLObject>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(57);
+
+		sb.append("{syncDLObjectId=");
+		sb.append(getSyncDLObjectId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createTime=");
+		sb.append(getCreateTime());
+		sb.append(", modifiedTime=");
+		sb.append(getModifiedTime());
+		sb.append(", repositoryId=");
+		sb.append(getRepositoryId());
+		sb.append(", parentFolderId=");
+		sb.append(getParentFolderId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", extension=");
+		sb.append(getExtension());
+		sb.append(", mimeType=");
+		sb.append(getMimeType());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", changeLog=");
+		sb.append(getChangeLog());
+		sb.append(", extraSettings=");
+		sb.append(getExtraSettings());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", versionId=");
+		sb.append(getVersionId());
+		sb.append(", size=");
+		sb.append(getSize());
+		sb.append(", checksum=");
+		sb.append(getChecksum());
+		sb.append(", event=");
+		sb.append(getEvent());
+		sb.append(", lanTokenKey=");
+		sb.append(getLanTokenKey());
+		sb.append(", lockExpirationDate=");
+		sb.append(getLockExpirationDate());
+		sb.append(", lockUserId=");
+		sb.append(getLockUserId());
+		sb.append(", lockUserName=");
+		sb.append(getLockUserName());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", typePK=");
+		sb.append(getTypePK());
+		sb.append(", typeUuid=");
+		sb.append(getTypeUuid());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(88);

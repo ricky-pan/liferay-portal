@@ -899,6 +899,42 @@ public class SocialActivityModelImpl extends BaseModelImpl<SocialActivity>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(29);
+
+		sb.append("{activityId=");
+		sb.append(getActivityId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", activitySetId=");
+		sb.append(getActivitySetId());
+		sb.append(", mirrorActivityId=");
+		sb.append(getMirrorActivityId());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", parentClassNameId=");
+		sb.append(getParentClassNameId());
+		sb.append(", parentClassPK=");
+		sb.append(getParentClassPK());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", extraData=");
+		sb.append(getExtraData());
+		sb.append(", receiverUserId=");
+		sb.append(getReceiverUserId());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(46);

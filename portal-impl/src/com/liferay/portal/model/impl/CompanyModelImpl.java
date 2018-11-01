@@ -725,6 +725,36 @@ public class CompanyModelImpl extends BaseModelImpl<Company>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(23);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", accountId=");
+		sb.append(getAccountId());
+		sb.append(", webId=");
+		sb.append(getWebId());
+		sb.append(", key=");
+		sb.append(getKey());
+		sb.append(", mx=");
+		sb.append(getMx());
+		sb.append(", homeURL=");
+		sb.append(getHomeURL());
+		sb.append(", logoId=");
+		sb.append(getLogoId());
+		sb.append(", system=");
+		sb.append(isSystem());
+		sb.append(", maxUsers=");
+		sb.append(getMaxUsers());
+		sb.append(", active=");
+		sb.append(isActive());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(37);

@@ -545,6 +545,12 @@ public class OAuth2ApplicationScopeAliasesModelImpl extends BaseModelImpl<OAuth2
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(17);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(28);

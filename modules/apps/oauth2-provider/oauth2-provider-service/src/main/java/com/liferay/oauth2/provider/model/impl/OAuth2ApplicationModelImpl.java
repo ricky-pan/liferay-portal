@@ -944,6 +944,50 @@ public class OAuth2ApplicationModelImpl extends BaseModelImpl<OAuth2Application>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(37);
+
+		sb.append("{oAuth2ApplicationId=");
+		sb.append(getOAuth2ApplicationId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", oAuth2ApplicationScopeAliasesId=");
+		sb.append(getOAuth2ApplicationScopeAliasesId());
+		sb.append(", allowedGrantTypes=");
+		sb.append(getAllowedGrantTypes());
+		sb.append(", clientId=");
+		sb.append(getClientId());
+		sb.append(", clientProfile=");
+		sb.append(getClientProfile());
+		sb.append(", clientSecret=");
+		sb.append(getClientSecret());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", features=");
+		sb.append(getFeatures());
+		sb.append(", homePageURL=");
+		sb.append(getHomePageURL());
+		sb.append(", iconFileEntryId=");
+		sb.append(getIconFileEntryId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", privacyPolicyURL=");
+		sb.append(getPrivacyPolicyURL());
+		sb.append(", redirectURIs=");
+		sb.append(getRedirectURIs());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(58);

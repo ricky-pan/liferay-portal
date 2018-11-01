@@ -868,6 +868,42 @@ public class WebsiteModelImpl extends BaseModelImpl<Website>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(29);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", uuid=");
+		sb.append(getUuid());
+		sb.append(", websiteId=");
+		sb.append(getWebsiteId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", url=");
+		sb.append(getUrl());
+		sb.append(", typeId=");
+		sb.append(getTypeId());
+		sb.append(", primary=");
+		sb.append(isPrimary());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(46);

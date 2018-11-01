@@ -14,6 +14,7 @@
 
 package com.liferay.portal.model.impl;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;

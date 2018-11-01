@@ -14,20 +14,17 @@
 
 package com.liferay.portal.dao.orm.hibernate;
 
-import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.dao.orm.ORMException;
 import com.liferay.portal.kernel.dao.orm.ObjectNotFoundException;
-import com.liferay.portal.kernel.json.JSONSerializable;
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.BaseModel;
-import com.liferay.portal.kernel.model.User;
-import com.liferay.portal.model.impl.UserImpl;
 
+import com.liferay.portal.kernel.model.impl.BaseModelImpl;
+import com.liferay.portal.model.impl.UserImpl;
 import org.hibernate.Session;
 import org.hibernate.StaleObjectStateException;
-import org.jabsorb.JSONSerializer;
-import org.jabsorb.serializer.MarshallException;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * @author Brian Wing Shun Chan
@@ -53,41 +50,18 @@ public class ExceptionTranslator {
 				object.getClass(), baseModel.getPrimaryKeyObj());
 
 			try {
-				Object jsonObject = _jsonSerializer.toJSON(object);
-				Object currJsonObject = _jsonSerializer.toJSON(currentObject);
-				return new ORMException(
-					jsonObject + " is stale in comparison to " + currJsonObject, e);
+				Method method = object.getClass().getSuperclass().getMethod("toProtectedString");
+				String objStr = (String) method.invoke(object);
+				String currObjStr = (String) method.invoke(currentObject);
+
+				return new ORMException(objStr + " is stale in comparison to " + currObjStr, e);
 			}
-			catch (MarshallException e1) {
-				e1.printStackTrace();
+			catch (Exception e1) {
+				return new ORMException(e1);
 			}
 		}
 
 		return new ORMException(e);
 	}
-
-	private static User _obfuscate(Object object) {
-
-		User user = (User)object;
-
-		user.setPassword(StringPool.EIGHT_STARS);
-		user.setDigest(StringPool.EIGHT_STARS);
-		user.setReminderQueryQuestion(StringPool.EIGHT_STARS);
-		user.setReminderQueryAnswer(StringPool.EIGHT_STARS);
-		user.setScreenName(StringPool.EIGHT_STARS);
-		user.setEmailAddress(StringPool.EIGHT_STARS);
-		user.setFacebookId((user.getFacebookId() != 0) ? 0 : -1);
-		user.setGoogleUserId(StringPool.EIGHT_STARS);
-		user.setGreeting(StringPool.EIGHT_STARS);
-		user.setFirstName(StringPool.EIGHT_STARS);
-		user.setMiddleName(StringPool.EIGHT_STARS);
-		user.setLastName(StringPool.EIGHT_STARS);
-		user.setJobTitle(StringPool.EIGHT_STARS);
-
-		return user;
-	}
-
-	private static final Log _log = LogFactoryUtil.getLog(ExceptionTranslator.class);
-	private static JSONSerializer _jsonSerializer;
 
 }

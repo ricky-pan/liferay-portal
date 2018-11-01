@@ -539,6 +539,12 @@ public class DLContentModelImpl extends BaseModelImpl<DLContent>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(17);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(28);

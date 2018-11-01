@@ -998,6 +998,52 @@ public class LayoutSetBranchModelImpl extends BaseModelImpl<LayoutSetBranch>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(39);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", layoutSetBranchId=");
+		sb.append(getLayoutSetBranchId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", privateLayout=");
+		sb.append(isPrivateLayout());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", master=");
+		sb.append(isMaster());
+		sb.append(", logoId=");
+		sb.append(getLogoId());
+		sb.append(", themeId=");
+		sb.append(getThemeId());
+		sb.append(", colorSchemeId=");
+		sb.append(getColorSchemeId());
+		sb.append(", css=");
+		sb.append(getCss());
+		sb.append(", settings=");
+		sb.append(getSettings());
+		sb.append(", layoutSetPrototypeUuid=");
+		sb.append(getLayoutSetPrototypeUuid());
+		sb.append(", layoutSetPrototypeLinkEnabled=");
+		sb.append(isLayoutSetPrototypeLinkEnabled());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(61);

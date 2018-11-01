@@ -792,6 +792,38 @@ public class SiteNavigationMenuModelImpl extends BaseModelImpl<SiteNavigationMen
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(25);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", siteNavigationMenuId=");
+		sb.append(getSiteNavigationMenuId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", auto=");
+		sb.append(isAuto());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(40);

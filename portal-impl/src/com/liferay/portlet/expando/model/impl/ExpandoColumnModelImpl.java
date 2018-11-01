@@ -515,6 +515,28 @@ public class ExpandoColumnModelImpl extends BaseModelImpl<ExpandoColumn>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(15);
+
+		sb.append("{columnId=");
+		sb.append(getColumnId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", tableId=");
+		sb.append(getTableId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", defaultData=");
+		sb.append(getDefaultData());
+		sb.append(", typeSettings=");
+		sb.append(getTypeSettings());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(25);

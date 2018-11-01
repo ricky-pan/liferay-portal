@@ -1948,6 +1948,80 @@ public class JournalArticleModelImpl extends BaseModelImpl<JournalArticle>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(67);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", id=");
+		sb.append(getId());
+		sb.append(", resourcePrimKey=");
+		sb.append(getResourcePrimKey());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", folderId=");
+		sb.append(getFolderId());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", treePath=");
+		sb.append(getTreePath());
+		sb.append(", articleId=");
+		sb.append(getArticleId());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", urlTitle=");
+		sb.append(getUrlTitle());
+		sb.append(", content=");
+		sb.append(getContent());
+		sb.append(", DDMStructureKey=");
+		sb.append(getDDMStructureKey());
+		sb.append(", DDMTemplateKey=");
+		sb.append(getDDMTemplateKey());
+		sb.append(", defaultLanguageId=");
+		sb.append(getDefaultLanguageId());
+		sb.append(", layoutUuid=");
+		sb.append(getLayoutUuid());
+		sb.append(", displayDate=");
+		sb.append(getDisplayDate());
+		sb.append(", expirationDate=");
+		sb.append(getExpirationDate());
+		sb.append(", reviewDate=");
+		sb.append(getReviewDate());
+		sb.append(", indexable=");
+		sb.append(isIndexable());
+		sb.append(", smallImage=");
+		sb.append(isSmallImage());
+		sb.append(", smallImageId=");
+		sb.append(getSmallImageId());
+		sb.append(", smallImageURL=");
+		sb.append(getSmallImageURL());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(103);

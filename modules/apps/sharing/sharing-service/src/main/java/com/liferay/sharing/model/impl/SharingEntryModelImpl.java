@@ -788,6 +788,36 @@ public class SharingEntryModelImpl extends BaseModelImpl<SharingEntry>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(23);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", sharingEntryId=");
+		sb.append(getSharingEntryId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", fromUserId=");
+		sb.append(getFromUserId());
+		sb.append(", toUserId=");
+		sb.append(getToUserId());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", actionIds=");
+		sb.append(getActionIds());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(37);

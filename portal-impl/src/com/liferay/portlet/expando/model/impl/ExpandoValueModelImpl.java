@@ -645,6 +645,30 @@ public class ExpandoValueModelImpl extends BaseModelImpl<ExpandoValue>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(17);
+
+		sb.append("{valueId=");
+		sb.append(getValueId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", tableId=");
+		sb.append(getTableId());
+		sb.append(", columnId=");
+		sb.append(getColumnId());
+		sb.append(", rowId=");
+		sb.append(getRowId());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", data=");
+		sb.append(getData());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(28);

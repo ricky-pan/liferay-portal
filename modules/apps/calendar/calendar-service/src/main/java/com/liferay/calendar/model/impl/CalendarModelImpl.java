@@ -1201,6 +1201,48 @@ public class CalendarModelImpl extends BaseModelImpl<Calendar>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(35);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", calendarId=");
+		sb.append(getCalendarId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", calendarResourceId=");
+		sb.append(getCalendarResourceId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", timeZoneId=");
+		sb.append(getTimeZoneId());
+		sb.append(", color=");
+		sb.append(getColor());
+		sb.append(", defaultCalendar=");
+		sb.append(isDefaultCalendar());
+		sb.append(", enableComments=");
+		sb.append(isEnableComments());
+		sb.append(", enableRatings=");
+		sb.append(isEnableRatings());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(55);

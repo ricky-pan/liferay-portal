@@ -1100,6 +1100,42 @@ public class MDRRuleModelImpl extends BaseModelImpl<MDRRule>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(29);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", ruleId=");
+		sb.append(getRuleId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", ruleGroupId=");
+		sb.append(getRuleGroupId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", typeSettings=");
+		sb.append(getTypeSettings());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(46);

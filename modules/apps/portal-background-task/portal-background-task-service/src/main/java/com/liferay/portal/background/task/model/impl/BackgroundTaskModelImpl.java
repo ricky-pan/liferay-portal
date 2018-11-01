@@ -916,6 +916,46 @@ public class BackgroundTaskModelImpl extends BaseModelImpl<BackgroundTask>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(33);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", backgroundTaskId=");
+		sb.append(getBackgroundTaskId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", servletContextNames=");
+		sb.append(getServletContextNames());
+		sb.append(", taskExecutorClassName=");
+		sb.append(getTaskExecutorClassName());
+		sb.append(", taskContextMap=");
+		sb.append(getTaskContextMap());
+		sb.append(", completed=");
+		sb.append(isCompleted());
+		sb.append(", completionDate=");
+		sb.append(getCompletionDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusMessage=");
+		sb.append(getStatusMessage());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(52);

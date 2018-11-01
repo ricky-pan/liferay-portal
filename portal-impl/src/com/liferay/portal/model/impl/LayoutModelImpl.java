@@ -2089,6 +2089,74 @@ public class LayoutModelImpl extends BaseModelImpl<Layout>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(61);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", uuid=");
+		sb.append(getUuid());
+		sb.append(", plid=");
+		sb.append(getPlid());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", privateLayout=");
+		sb.append(isPrivateLayout());
+		sb.append(", layoutId=");
+		sb.append(getLayoutId());
+		sb.append(", parentLayoutId=");
+		sb.append(getParentLayoutId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", keywords=");
+		sb.append(getKeywords());
+		sb.append(", robots=");
+		sb.append(getRobots());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", typeSettings=");
+		sb.append(getTypeSettings());
+		sb.append(", hidden=");
+		sb.append(isHidden());
+		sb.append(", friendlyURL=");
+		sb.append(getFriendlyURL());
+		sb.append(", iconImageId=");
+		sb.append(getIconImageId());
+		sb.append(", themeId=");
+		sb.append(getThemeId());
+		sb.append(", colorSchemeId=");
+		sb.append(getColorSchemeId());
+		sb.append(", css=");
+		sb.append(getCss());
+		sb.append(", priority=");
+		sb.append(getPriority());
+		sb.append(", layoutPrototypeUuid=");
+		sb.append(getLayoutPrototypeUuid());
+		sb.append(", layoutPrototypeLinkEnabled=");
+		sb.append(isLayoutPrototypeLinkEnabled());
+		sb.append(", sourcePrototypeLayoutUuid=");
+		sb.append(getSourcePrototypeLayoutUuid());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(94);

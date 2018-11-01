@@ -432,6 +432,12 @@ public class VersionedEntryVersionModelImpl extends BaseModelImpl<VersionedEntry
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(9);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(16);

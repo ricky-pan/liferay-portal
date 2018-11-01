@@ -535,6 +535,12 @@ public class DLFileRankModelImpl extends BaseModelImpl<DLFileRank>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(15);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(25);

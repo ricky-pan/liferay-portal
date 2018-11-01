@@ -1622,6 +1622,66 @@ public class DDMTemplateModelImpl extends BaseModelImpl<DDMTemplate>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(53);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", templateId=");
+		sb.append(getTemplateId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", versionUserId=");
+		sb.append(getVersionUserId());
+		sb.append(", versionUserName=");
+		sb.append(getVersionUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", resourceClassNameId=");
+		sb.append(getResourceClassNameId());
+		sb.append(", templateKey=");
+		sb.append(getTemplateKey());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", mode=");
+		sb.append(getMode());
+		sb.append(", language=");
+		sb.append(getLanguage());
+		sb.append(", script=");
+		sb.append(getScript());
+		sb.append(", cacheable=");
+		sb.append(isCacheable());
+		sb.append(", smallImage=");
+		sb.append(isSmallImage());
+		sb.append(", smallImageId=");
+		sb.append(getSmallImageId());
+		sb.append(", smallImageURL=");
+		sb.append(getSmallImageURL());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(82);

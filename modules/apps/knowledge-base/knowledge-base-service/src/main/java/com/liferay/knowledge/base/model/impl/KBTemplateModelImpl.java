@@ -727,6 +727,36 @@ public class KBTemplateModelImpl extends BaseModelImpl<KBTemplate>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(23);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", kbTemplateId=");
+		sb.append(getKbTemplateId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", content=");
+		sb.append(getContent());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(37);

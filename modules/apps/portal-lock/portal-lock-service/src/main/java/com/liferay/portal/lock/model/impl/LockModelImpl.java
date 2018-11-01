@@ -694,6 +694,12 @@ public class LockModelImpl extends BaseModelImpl<Lock> implements LockModel {
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(25);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(40);

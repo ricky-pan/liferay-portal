@@ -836,6 +836,44 @@ public class AuditEventModelImpl extends BaseModelImpl<AuditEvent>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(31);
+
+		sb.append("{auditEventId=");
+		sb.append(getAuditEventId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", eventType=");
+		sb.append(getEventType());
+		sb.append(", className=");
+		sb.append(getClassName());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", message=");
+		sb.append(getMessage());
+		sb.append(", clientHost=");
+		sb.append(getClientHost());
+		sb.append(", clientIP=");
+		sb.append(getClientIP());
+		sb.append(", serverName=");
+		sb.append(getServerName());
+		sb.append(", serverPort=");
+		sb.append(getServerPort());
+		sb.append(", sessionID=");
+		sb.append(getSessionID());
+		sb.append(", additionalInfo=");
+		sb.append(getAdditionalInfo());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(49);

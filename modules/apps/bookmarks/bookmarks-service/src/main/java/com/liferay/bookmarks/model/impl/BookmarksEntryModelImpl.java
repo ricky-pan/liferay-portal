@@ -1294,6 +1294,54 @@ public class BookmarksEntryModelImpl extends BaseModelImpl<BookmarksEntry>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(41);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", entryId=");
+		sb.append(getEntryId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", folderId=");
+		sb.append(getFolderId());
+		sb.append(", treePath=");
+		sb.append(getTreePath());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", url=");
+		sb.append(getUrl());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", visits=");
+		sb.append(getVisits());
+		sb.append(", priority=");
+		sb.append(getPriority());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(64);

@@ -927,6 +927,46 @@ public class DDLRecordModelImpl extends BaseModelImpl<DDLRecord>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(33);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", recordId=");
+		sb.append(getRecordId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", versionUserId=");
+		sb.append(getVersionUserId());
+		sb.append(", versionUserName=");
+		sb.append(getVersionUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", DDMStorageId=");
+		sb.append(getDDMStorageId());
+		sb.append(", recordSetId=");
+		sb.append(getRecordSetId());
+		sb.append(", recordSetVersion=");
+		sb.append(getRecordSetVersion());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", displayIndex=");
+		sb.append(getDisplayIndex());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(52);

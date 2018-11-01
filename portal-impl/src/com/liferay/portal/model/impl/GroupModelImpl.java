@@ -1518,6 +1518,58 @@ public class GroupModelImpl extends BaseModelImpl<Group> implements GroupModel {
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(45);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", uuid=");
+		sb.append(getUuid());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", creatorUserId=");
+		sb.append(getCreatorUserId());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", parentGroupId=");
+		sb.append(getParentGroupId());
+		sb.append(", liveGroupId=");
+		sb.append(getLiveGroupId());
+		sb.append(", treePath=");
+		sb.append(getTreePath());
+		sb.append(", groupKey=");
+		sb.append(getGroupKey());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", typeSettings=");
+		sb.append(getTypeSettings());
+		sb.append(", manualMembership=");
+		sb.append(isManualMembership());
+		sb.append(", membershipRestriction=");
+		sb.append(getMembershipRestriction());
+		sb.append(", friendlyURL=");
+		sb.append(getFriendlyURL());
+		sb.append(", site=");
+		sb.append(isSite());
+		sb.append(", remoteStagingGroupCount=");
+		sb.append(getRemoteStagingGroupCount());
+		sb.append(", inheritContent=");
+		sb.append(isInheritContent());
+		sb.append(", active=");
+		sb.append(isActive());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(70);

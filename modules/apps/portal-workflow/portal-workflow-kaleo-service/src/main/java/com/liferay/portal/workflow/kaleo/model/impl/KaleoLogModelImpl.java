@@ -1297,6 +1297,12 @@ public class KaleoLogModelImpl extends BaseModelImpl<KaleoLog>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(61);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(94);

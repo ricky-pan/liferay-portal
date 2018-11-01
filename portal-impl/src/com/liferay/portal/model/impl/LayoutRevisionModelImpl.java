@@ -2005,6 +2005,72 @@ public class LayoutRevisionModelImpl extends BaseModelImpl<LayoutRevision>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(59);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", layoutRevisionId=");
+		sb.append(getLayoutRevisionId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", layoutSetBranchId=");
+		sb.append(getLayoutSetBranchId());
+		sb.append(", layoutBranchId=");
+		sb.append(getLayoutBranchId());
+		sb.append(", parentLayoutRevisionId=");
+		sb.append(getParentLayoutRevisionId());
+		sb.append(", head=");
+		sb.append(isHead());
+		sb.append(", major=");
+		sb.append(isMajor());
+		sb.append(", plid=");
+		sb.append(getPlid());
+		sb.append(", privateLayout=");
+		sb.append(isPrivateLayout());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", keywords=");
+		sb.append(getKeywords());
+		sb.append(", robots=");
+		sb.append(getRobots());
+		sb.append(", typeSettings=");
+		sb.append(getTypeSettings());
+		sb.append(", iconImageId=");
+		sb.append(getIconImageId());
+		sb.append(", themeId=");
+		sb.append(getThemeId());
+		sb.append(", colorSchemeId=");
+		sb.append(getColorSchemeId());
+		sb.append(", css=");
+		sb.append(getCss());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(91);

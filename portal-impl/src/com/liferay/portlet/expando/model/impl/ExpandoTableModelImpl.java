@@ -412,6 +412,22 @@ public class ExpandoTableModelImpl extends BaseModelImpl<ExpandoTable>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(9);
+
+		sb.append("{tableId=");
+		sb.append(getTableId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(16);

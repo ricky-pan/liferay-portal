@@ -953,6 +953,40 @@ public class KaleoDefinitionModelImpl extends BaseModelImpl<KaleoDefinition>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(27);
+
+		sb.append("{kaleoDefinitionId=");
+		sb.append(getKaleoDefinitionId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", content=");
+		sb.append(getContent());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", active=");
+		sb.append(isActive());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(43);

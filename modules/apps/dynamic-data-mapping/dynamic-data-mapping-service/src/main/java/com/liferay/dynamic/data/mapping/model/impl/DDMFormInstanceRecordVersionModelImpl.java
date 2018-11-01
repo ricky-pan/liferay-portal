@@ -958,6 +958,44 @@ public class DDMFormInstanceRecordVersionModelImpl extends BaseModelImpl<DDMForm
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(31);
+
+		sb.append("{formInstanceRecordVersionId=");
+		sb.append(getFormInstanceRecordVersionId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", formInstanceId=");
+		sb.append(getFormInstanceId());
+		sb.append(", formInstanceVersion=");
+		sb.append(getFormInstanceVersion());
+		sb.append(", formInstanceRecordId=");
+		sb.append(getFormInstanceRecordId());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append(", storageId=");
+		sb.append(getStorageId());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(49);

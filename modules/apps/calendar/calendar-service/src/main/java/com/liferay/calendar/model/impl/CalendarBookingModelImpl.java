@@ -1879,6 +1879,72 @@ public class CalendarBookingModelImpl extends BaseModelImpl<CalendarBooking>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(59);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", calendarBookingId=");
+		sb.append(getCalendarBookingId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", calendarId=");
+		sb.append(getCalendarId());
+		sb.append(", calendarResourceId=");
+		sb.append(getCalendarResourceId());
+		sb.append(", parentCalendarBookingId=");
+		sb.append(getParentCalendarBookingId());
+		sb.append(", recurringCalendarBookingId=");
+		sb.append(getRecurringCalendarBookingId());
+		sb.append(", vEventUid=");
+		sb.append(getVEventUid());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", location=");
+		sb.append(getLocation());
+		sb.append(", startTime=");
+		sb.append(getStartTime());
+		sb.append(", endTime=");
+		sb.append(getEndTime());
+		sb.append(", allDay=");
+		sb.append(isAllDay());
+		sb.append(", recurrence=");
+		sb.append(getRecurrence());
+		sb.append(", firstReminder=");
+		sb.append(getFirstReminder());
+		sb.append(", firstReminderType=");
+		sb.append(getFirstReminderType());
+		sb.append(", secondReminder=");
+		sb.append(getSecondReminder());
+		sb.append(", secondReminderType=");
+		sb.append(getSecondReminderType());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(91);

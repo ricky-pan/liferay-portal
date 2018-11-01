@@ -1275,6 +1275,52 @@ public class DDLRecordSetModelImpl extends BaseModelImpl<DDLRecordSet>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(39);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", recordSetId=");
+		sb.append(getRecordSetId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", versionUserId=");
+		sb.append(getVersionUserId());
+		sb.append(", versionUserName=");
+		sb.append(getVersionUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", DDMStructureId=");
+		sb.append(getDDMStructureId());
+		sb.append(", recordSetKey=");
+		sb.append(getRecordSetKey());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", minDisplayRows=");
+		sb.append(getMinDisplayRows());
+		sb.append(", scope=");
+		sb.append(getScope());
+		sb.append(", settings=");
+		sb.append(getSettings());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(61);

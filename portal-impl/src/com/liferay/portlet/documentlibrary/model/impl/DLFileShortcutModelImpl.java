@@ -1218,6 +1218,50 @@ public class DLFileShortcutModelImpl extends BaseModelImpl<DLFileShortcut>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(37);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", fileShortcutId=");
+		sb.append(getFileShortcutId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", repositoryId=");
+		sb.append(getRepositoryId());
+		sb.append(", folderId=");
+		sb.append(getFolderId());
+		sb.append(", toFileEntryId=");
+		sb.append(getToFileEntryId());
+		sb.append(", treePath=");
+		sb.append(getTreePath());
+		sb.append(", active=");
+		sb.append(isActive());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(58);

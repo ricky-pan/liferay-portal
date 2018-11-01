@@ -1441,6 +1441,60 @@ public class MBThreadModelImpl extends BaseModelImpl<MBThread>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(47);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", threadId=");
+		sb.append(getThreadId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", categoryId=");
+		sb.append(getCategoryId());
+		sb.append(", rootMessageId=");
+		sb.append(getRootMessageId());
+		sb.append(", rootMessageUserId=");
+		sb.append(getRootMessageUserId());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", messageCount=");
+		sb.append(getMessageCount());
+		sb.append(", viewCount=");
+		sb.append(getViewCount());
+		sb.append(", lastPostByUserId=");
+		sb.append(getLastPostByUserId());
+		sb.append(", lastPostDate=");
+		sb.append(getLastPostDate());
+		sb.append(", priority=");
+		sb.append(getPriority());
+		sb.append(", question=");
+		sb.append(isQuestion());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(73);

@@ -417,4 +417,6 @@ public interface User extends UserModel, PersistedModel {
 	public void setPasswordModified(boolean passwordModified);
 
 	public void setPasswordUnencrypted(String passwordUnencrypted);
+
+	public String toProtectedString();
 }

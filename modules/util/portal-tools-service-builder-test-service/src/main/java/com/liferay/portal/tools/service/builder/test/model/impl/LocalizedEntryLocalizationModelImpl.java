@@ -457,6 +457,12 @@ public class LocalizedEntryLocalizationModelImpl extends BaseModelImpl<Localized
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(13);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(22);

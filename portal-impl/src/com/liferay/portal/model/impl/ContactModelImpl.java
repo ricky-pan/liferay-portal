@@ -1361,6 +1361,72 @@ public class ContactModelImpl extends BaseModelImpl<Contact>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(59);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", contactId=");
+		sb.append(getContactId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", accountId=");
+		sb.append(getAccountId());
+		sb.append(", parentContactId=");
+		sb.append(getParentContactId());
+		sb.append(", emailAddress=");
+		sb.append(getEmailAddress());
+		sb.append(", firstName=");
+		sb.append(getFirstName());
+		sb.append(", middleName=");
+		sb.append(getMiddleName());
+		sb.append(", lastName=");
+		sb.append(getLastName());
+		sb.append(", prefixId=");
+		sb.append(getPrefixId());
+		sb.append(", suffixId=");
+		sb.append(getSuffixId());
+		sb.append(", male=");
+		sb.append(isMale());
+		sb.append(", birthday=");
+		sb.append(getBirthday());
+		sb.append(", smsSn=");
+		sb.append(getSmsSn());
+		sb.append(", facebookSn=");
+		sb.append(getFacebookSn());
+		sb.append(", jabberSn=");
+		sb.append(getJabberSn());
+		sb.append(", skypeSn=");
+		sb.append(getSkypeSn());
+		sb.append(", twitterSn=");
+		sb.append(getTwitterSn());
+		sb.append(", employeeStatusId=");
+		sb.append(getEmployeeStatusId());
+		sb.append(", employeeNumber=");
+		sb.append(getEmployeeNumber());
+		sb.append(", jobTitle=");
+		sb.append(getJobTitle());
+		sb.append(", jobClass=");
+		sb.append(getJobClass());
+		sb.append(", hoursOfOperation=");
+		sb.append(getHoursOfOperation());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(91);

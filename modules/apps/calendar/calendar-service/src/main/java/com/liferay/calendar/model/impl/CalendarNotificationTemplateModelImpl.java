@@ -915,6 +915,44 @@ public class CalendarNotificationTemplateModelImpl extends BaseModelImpl<Calenda
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(31);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", calendarNotificationTemplateId=");
+		sb.append(getCalendarNotificationTemplateId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", calendarId=");
+		sb.append(getCalendarId());
+		sb.append(", notificationType=");
+		sb.append(getNotificationType());
+		sb.append(", notificationTypeSettings=");
+		sb.append(getNotificationTypeSettings());
+		sb.append(", notificationTemplateType=");
+		sb.append(getNotificationTemplateType());
+		sb.append(", subject=");
+		sb.append(getSubject());
+		sb.append(", body=");
+		sb.append(getBody());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(49);

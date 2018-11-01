@@ -601,6 +601,30 @@ public class PortletPreferencesModelImpl extends BaseModelImpl<PortletPreference
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(17);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", portletPreferencesId=");
+		sb.append(getPortletPreferencesId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", ownerId=");
+		sb.append(getOwnerId());
+		sb.append(", ownerType=");
+		sb.append(getOwnerType());
+		sb.append(", plid=");
+		sb.append(getPlid());
+		sb.append(", portletId=");
+		sb.append(getPortletId());
+		sb.append(", preferences=");
+		sb.append(getPreferences());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(28);

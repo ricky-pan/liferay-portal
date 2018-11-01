@@ -646,6 +646,12 @@ public class MBThreadFlagModelImpl extends BaseModelImpl<MBThreadFlag>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(21);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(34);

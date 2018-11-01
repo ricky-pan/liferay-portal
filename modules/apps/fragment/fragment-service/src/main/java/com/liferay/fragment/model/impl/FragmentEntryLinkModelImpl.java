@@ -1024,6 +1024,12 @@ public class FragmentEntryLinkModelImpl extends BaseModelImpl<FragmentEntryLink>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(41);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(64);

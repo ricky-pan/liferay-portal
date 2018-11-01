@@ -930,6 +930,38 @@ public class SAPEntryModelImpl extends BaseModelImpl<SAPEntry>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(25);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", sapEntryId=");
+		sb.append(getSapEntryId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", allowedServiceSignatures=");
+		sb.append(getAllowedServiceSignatures());
+		sb.append(", defaultSAPEntry=");
+		sb.append(isDefaultSAPEntry());
+		sb.append(", enabled=");
+		sb.append(isEnabled());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(40);

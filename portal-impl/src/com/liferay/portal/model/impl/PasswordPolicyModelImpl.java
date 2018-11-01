@@ -1418,6 +1418,84 @@ public class PasswordPolicyModelImpl extends BaseModelImpl<PasswordPolicy>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(71);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", uuid=");
+		sb.append(getUuid());
+		sb.append(", passwordPolicyId=");
+		sb.append(getPasswordPolicyId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", defaultPolicy=");
+		sb.append(isDefaultPolicy());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", changeable=");
+		sb.append(isChangeable());
+		sb.append(", changeRequired=");
+		sb.append(isChangeRequired());
+		sb.append(", minAge=");
+		sb.append(getMinAge());
+		sb.append(", checkSyntax=");
+		sb.append(isCheckSyntax());
+		sb.append(", allowDictionaryWords=");
+		sb.append(isAllowDictionaryWords());
+		sb.append(", minAlphanumeric=");
+		sb.append(getMinAlphanumeric());
+		sb.append(", minLength=");
+		sb.append(getMinLength());
+		sb.append(", minLowerCase=");
+		sb.append(getMinLowerCase());
+		sb.append(", minNumbers=");
+		sb.append(getMinNumbers());
+		sb.append(", minSymbols=");
+		sb.append(getMinSymbols());
+		sb.append(", minUpperCase=");
+		sb.append(getMinUpperCase());
+		sb.append(", regex=");
+		sb.append(getRegex());
+		sb.append(", history=");
+		sb.append(isHistory());
+		sb.append(", historyCount=");
+		sb.append(getHistoryCount());
+		sb.append(", expireable=");
+		sb.append(isExpireable());
+		sb.append(", maxAge=");
+		sb.append(getMaxAge());
+		sb.append(", warningTime=");
+		sb.append(getWarningTime());
+		sb.append(", graceLimit=");
+		sb.append(getGraceLimit());
+		sb.append(", lockout=");
+		sb.append(isLockout());
+		sb.append(", maxFailure=");
+		sb.append(getMaxFailure());
+		sb.append(", lockoutDuration=");
+		sb.append(getLockoutDuration());
+		sb.append(", requireUnlock=");
+		sb.append(isRequireUnlock());
+		sb.append(", resetFailureCount=");
+		sb.append(getResetFailureCount());
+		sb.append(", resetTicketMaxAge=");
+		sb.append(getResetTicketMaxAge());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(109);

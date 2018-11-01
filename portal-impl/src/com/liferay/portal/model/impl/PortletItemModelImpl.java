@@ -667,6 +667,12 @@ public class PortletItemModelImpl extends BaseModelImpl<PortletItem>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(23);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(37);

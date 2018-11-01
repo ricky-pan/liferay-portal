@@ -647,6 +647,32 @@ public class AssetCategoryPropertyModelImpl extends BaseModelImpl<AssetCategoryP
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(19);
+
+		sb.append("{categoryPropertyId=");
+		sb.append(getCategoryPropertyId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", categoryId=");
+		sb.append(getCategoryId());
+		sb.append(", key=");
+		sb.append(getKey());
+		sb.append(", value=");
+		sb.append(getValue());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(31);

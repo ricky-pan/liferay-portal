@@ -552,6 +552,28 @@ public class AnnouncementsDeliveryModelImpl extends BaseModelImpl<AnnouncementsD
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(15);
+
+		sb.append("{deliveryId=");
+		sb.append(getDeliveryId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", email=");
+		sb.append(isEmail());
+		sb.append(", sms=");
+		sb.append(isSms());
+		sb.append(", website=");
+		sb.append(isWebsite());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(25);

@@ -1997,6 +1997,11 @@ public class UserWrapper implements User, ModelWrapper<User> {
 	}
 
 	@Override
+	public String toProtectedString() {
+		return _user.toProtectedString();
+	}
+
+	@Override
 	public String toString() {
 		return _user.toString();
 	}

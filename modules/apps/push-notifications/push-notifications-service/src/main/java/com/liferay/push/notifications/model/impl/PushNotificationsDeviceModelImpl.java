@@ -542,6 +542,26 @@ public class PushNotificationsDeviceModelImpl extends BaseModelImpl<PushNotifica
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(13);
+
+		sb.append("{pushNotificationsDeviceId=");
+		sb.append(getPushNotificationsDeviceId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", platform=");
+		sb.append(getPlatform());
+		sb.append(", token=");
+		sb.append(getToken());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(22);

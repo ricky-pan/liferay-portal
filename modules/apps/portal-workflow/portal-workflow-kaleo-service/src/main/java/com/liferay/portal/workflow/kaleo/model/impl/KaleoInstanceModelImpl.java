@@ -882,6 +882,12 @@ public class KaleoInstanceModelImpl extends BaseModelImpl<KaleoInstance>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(33);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(52);

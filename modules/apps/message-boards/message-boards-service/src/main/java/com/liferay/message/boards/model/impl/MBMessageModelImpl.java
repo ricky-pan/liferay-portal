@@ -1566,6 +1566,66 @@ public class MBMessageModelImpl extends BaseModelImpl<MBMessage>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(53);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", messageId=");
+		sb.append(getMessageId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", classNameId=");
+		sb.append(getClassNameId());
+		sb.append(", classPK=");
+		sb.append(getClassPK());
+		sb.append(", categoryId=");
+		sb.append(getCategoryId());
+		sb.append(", threadId=");
+		sb.append(getThreadId());
+		sb.append(", rootMessageId=");
+		sb.append(getRootMessageId());
+		sb.append(", parentMessageId=");
+		sb.append(getParentMessageId());
+		sb.append(", subject=");
+		sb.append(getSubject());
+		sb.append(", body=");
+		sb.append(getBody());
+		sb.append(", format=");
+		sb.append(getFormat());
+		sb.append(", anonymous=");
+		sb.append(isAnonymous());
+		sb.append(", priority=");
+		sb.append(getPriority());
+		sb.append(", allowPingbacks=");
+		sb.append(isAllowPingbacks());
+		sb.append(", answer=");
+		sb.append(isAnswer());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(82);

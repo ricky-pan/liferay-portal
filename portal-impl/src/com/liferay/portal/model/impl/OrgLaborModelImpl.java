@@ -822,6 +822,52 @@ public class OrgLaborModelImpl extends BaseModelImpl<OrgLabor>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(39);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", orgLaborId=");
+		sb.append(getOrgLaborId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", organizationId=");
+		sb.append(getOrganizationId());
+		sb.append(", typeId=");
+		sb.append(getTypeId());
+		sb.append(", sunOpen=");
+		sb.append(getSunOpen());
+		sb.append(", sunClose=");
+		sb.append(getSunClose());
+		sb.append(", monOpen=");
+		sb.append(getMonOpen());
+		sb.append(", monClose=");
+		sb.append(getMonClose());
+		sb.append(", tueOpen=");
+		sb.append(getTueOpen());
+		sb.append(", tueClose=");
+		sb.append(getTueClose());
+		sb.append(", wedOpen=");
+		sb.append(getWedOpen());
+		sb.append(", wedClose=");
+		sb.append(getWedClose());
+		sb.append(", thuOpen=");
+		sb.append(getThuOpen());
+		sb.append(", thuClose=");
+		sb.append(getThuClose());
+		sb.append(", friOpen=");
+		sb.append(getFriOpen());
+		sb.append(", friClose=");
+		sb.append(getFriClose());
+		sb.append(", satOpen=");
+		sb.append(getSatOpen());
+		sb.append(", satClose=");
+		sb.append(getSatClose());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(61);

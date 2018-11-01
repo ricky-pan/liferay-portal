@@ -845,6 +845,42 @@ public class AppModelImpl extends BaseModelImpl<App> implements AppModel {
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(29);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", appId=");
+		sb.append(getAppId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", remoteAppId=");
+		sb.append(getRemoteAppId());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", category=");
+		sb.append(getCategory());
+		sb.append(", iconURL=");
+		sb.append(getIconURL());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", required=");
+		sb.append(isRequired());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(46);

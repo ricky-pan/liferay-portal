@@ -784,6 +784,40 @@ public class PowwowParticipantModelImpl extends BaseModelImpl<PowwowParticipant>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(27);
+
+		sb.append("{powwowParticipantId=");
+		sb.append(getPowwowParticipantId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", powwowMeetingId=");
+		sb.append(getPowwowMeetingId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", participantUserId=");
+		sb.append(getParticipantUserId());
+		sb.append(", emailAddress=");
+		sb.append(getEmailAddress());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(43);

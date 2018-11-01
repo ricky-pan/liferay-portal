@@ -703,6 +703,36 @@ public class MembershipRequestModelImpl extends BaseModelImpl<MembershipRequest>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(23);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", membershipRequestId=");
+		sb.append(getMembershipRequestId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", comments=");
+		sb.append(getComments());
+		sb.append(", replyComments=");
+		sb.append(getReplyComments());
+		sb.append(", replyDate=");
+		sb.append(getReplyDate());
+		sb.append(", replierUserId=");
+		sb.append(getReplierUserId());
+		sb.append(", statusId=");
+		sb.append(getStatusId());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(37);

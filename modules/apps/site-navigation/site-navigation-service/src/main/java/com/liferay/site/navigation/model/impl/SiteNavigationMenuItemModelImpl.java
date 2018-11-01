@@ -891,6 +891,44 @@ public class SiteNavigationMenuItemModelImpl extends BaseModelImpl<SiteNavigatio
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(31);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", siteNavigationMenuItemId=");
+		sb.append(getSiteNavigationMenuItemId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", siteNavigationMenuId=");
+		sb.append(getSiteNavigationMenuId());
+		sb.append(", parentSiteNavigationMenuItemId=");
+		sb.append(getParentSiteNavigationMenuItemId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", typeSettings=");
+		sb.append(getTypeSettings());
+		sb.append(", order=");
+		sb.append(getOrder());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(49);

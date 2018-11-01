@@ -1159,6 +1159,60 @@ public class JournalFeedModelImpl extends BaseModelImpl<JournalFeed>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(47);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", id=");
+		sb.append(getId());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", feedId=");
+		sb.append(getFeedId());
+		sb.append(", name=");
+		sb.append(getName());
+		sb.append(", description=");
+		sb.append(getDescription());
+		sb.append(", DDMStructureKey=");
+		sb.append(getDDMStructureKey());
+		sb.append(", DDMTemplateKey=");
+		sb.append(getDDMTemplateKey());
+		sb.append(", DDMRendererTemplateKey=");
+		sb.append(getDDMRendererTemplateKey());
+		sb.append(", delta=");
+		sb.append(getDelta());
+		sb.append(", orderByCol=");
+		sb.append(getOrderByCol());
+		sb.append(", orderByType=");
+		sb.append(getOrderByType());
+		sb.append(", targetLayoutFriendlyUrl=");
+		sb.append(getTargetLayoutFriendlyUrl());
+		sb.append(", targetPortletId=");
+		sb.append(getTargetPortletId());
+		sb.append(", contentField=");
+		sb.append(getContentField());
+		sb.append(", feedFormat=");
+		sb.append(getFeedFormat());
+		sb.append(", feedVersion=");
+		sb.append(getFeedVersion());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(73);

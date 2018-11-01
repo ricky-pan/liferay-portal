@@ -755,6 +755,38 @@ public class SyncDeviceModelImpl extends BaseModelImpl<SyncDevice>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(25);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", syncDeviceId=");
+		sb.append(getSyncDeviceId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", type=");
+		sb.append(getType());
+		sb.append(", buildNumber=");
+		sb.append(getBuildNumber());
+		sb.append(", featureSet=");
+		sb.append(getFeatureSet());
+		sb.append(", hostname=");
+		sb.append(getHostname());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(40);

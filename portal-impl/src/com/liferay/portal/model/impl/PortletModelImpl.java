@@ -503,6 +503,26 @@ public class PortletModelImpl extends BaseModelImpl<Portlet>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(13);
+
+		sb.append("{mvccVersion=");
+		sb.append(getMvccVersion());
+		sb.append(", id=");
+		sb.append(getId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", portletId=");
+		sb.append(getPortletId());
+		sb.append(", roles=");
+		sb.append(getRoles());
+		sb.append(", active=");
+		sb.append(isActive());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(22);

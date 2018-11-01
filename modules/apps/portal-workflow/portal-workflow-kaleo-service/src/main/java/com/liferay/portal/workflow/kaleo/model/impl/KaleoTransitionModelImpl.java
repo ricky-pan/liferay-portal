@@ -826,6 +826,12 @@ public class KaleoTransitionModelImpl extends BaseModelImpl<KaleoTransition>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(33);
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(52);

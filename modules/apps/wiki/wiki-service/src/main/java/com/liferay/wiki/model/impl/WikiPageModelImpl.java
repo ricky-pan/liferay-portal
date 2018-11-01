@@ -1577,6 +1577,62 @@ public class WikiPageModelImpl extends BaseModelImpl<WikiPage>
 		return sb.toString();
 	}
 
+	public String toProtectedString() {
+		StringBundler sb = new StringBundler(49);
+
+		sb.append("{uuid=");
+		sb.append(getUuid());
+		sb.append(", pageId=");
+		sb.append(getPageId());
+		sb.append(", resourcePrimKey=");
+		sb.append(getResourcePrimKey());
+		sb.append(", groupId=");
+		sb.append(getGroupId());
+		sb.append(", companyId=");
+		sb.append(getCompanyId());
+		sb.append(", userId=");
+		sb.append(getUserId());
+		sb.append(", userName=");
+		sb.append(getUserName());
+		sb.append(", createDate=");
+		sb.append(getCreateDate());
+		sb.append(", modifiedDate=");
+		sb.append(getModifiedDate());
+		sb.append(", nodeId=");
+		sb.append(getNodeId());
+		sb.append(", title=");
+		sb.append(getTitle());
+		sb.append(", version=");
+		sb.append(getVersion());
+		sb.append(", minorEdit=");
+		sb.append(isMinorEdit());
+		sb.append(", content=");
+		sb.append(getContent());
+		sb.append(", summary=");
+		sb.append(getSummary());
+		sb.append(", format=");
+		sb.append(getFormat());
+		sb.append(", head=");
+		sb.append(isHead());
+		sb.append(", parentTitle=");
+		sb.append(getParentTitle());
+		sb.append(", redirectTitle=");
+		sb.append(getRedirectTitle());
+		sb.append(", lastPublishDate=");
+		sb.append(getLastPublishDate());
+		sb.append(", status=");
+		sb.append(getStatus());
+		sb.append(", statusByUserId=");
+		sb.append(getStatusByUserId());
+		sb.append(", statusByUserName=");
+		sb.append(getStatusByUserName());
+		sb.append(", statusDate=");
+		sb.append(getStatusDate());
+		sb.append("}");
+
+		return sb.toString();
+	}
+
 	@Override
 	public String toXmlString() {
 		StringBundler sb = new StringBundler(76);
