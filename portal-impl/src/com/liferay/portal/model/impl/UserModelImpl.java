@@ -975,7 +975,7 @@ public class UserModelImpl extends BaseModelImpl<User> implements UserModel {
 		_digest = digest;
 	}
 
-	@JSON
+	@JSON(include = false)
 	@Override
 	public String getReminderQueryQuestion() {
 		if (_reminderQueryQuestion == null) {
@@ -991,7 +991,7 @@ public class UserModelImpl extends BaseModelImpl<User> implements UserModel {
 		_reminderQueryQuestion = reminderQueryQuestion;
 	}
 
-	@JSON
+	@JSON(include = false)
 	@Override
 	public String getReminderQueryAnswer() {
 		if (_reminderQueryAnswer == null) {
@@ -1007,7 +1007,7 @@ public class UserModelImpl extends BaseModelImpl<User> implements UserModel {
 		_reminderQueryAnswer = reminderQueryAnswer;
 	}
 
-	@JSON
+	@JSON(include = false)
 	@Override
 	public int getGraceLoginCount() {
 		return _graceLoginCount;
@@ -2040,12 +2040,6 @@ public class UserModelImpl extends BaseModelImpl<User> implements UserModel {
 		sb.append(isDefaultUser());
 		sb.append(", contactId=");
 		sb.append(getContactId());
-		sb.append(", reminderQueryQuestion=");
-		sb.append(getReminderQueryQuestion());
-		sb.append(", reminderQueryAnswer=");
-		sb.append(getReminderQueryAnswer());
-		sb.append(", graceLoginCount=");
-		sb.append(getGraceLoginCount());
 		sb.append(", screenName=");
 		sb.append(getScreenName());
 		sb.append(", emailAddress=");

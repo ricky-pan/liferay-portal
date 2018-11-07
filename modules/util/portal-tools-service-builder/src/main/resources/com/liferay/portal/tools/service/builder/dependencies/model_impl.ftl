@@ -1565,7 +1565,7 @@ public class ${entity.name}ModelImpl extends BaseModelImpl<${entity.name}> imple
 		StringBundler sb = new StringBundler(${entity.regularEntityColumns?size * 2 + 1});
 
 		<#list entity.regularEntityColumns as entityColumn>
-			<#if (!stringUtil.equals(entityColumn.type, "Blob") || !entityColumn.lazy) && entityColumn.jsonEnabled>
+			<#if (!stringUtil.equals(entityColumn.type, "Blob") || !entityColumn.lazy) && (validator.isNull(entityColumn.jsonEnabled) || entityColumn.jsonEnabled)>
 				<#if entityColumn_index == 0>
 					sb.append("{${entityColumn.name}=");
 				<#else>
