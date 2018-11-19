@@ -128,6 +128,28 @@
 	.alloy-editor-wrapper {
 		padding-top: 44px;
 
+		.cke_widget_wrapper.cke_widget_focused {
+			> .cke_widget_element,
+			> .cke_widget_wrapper,
+			> .cke_widget_editable.cke_widget_editable_focused {
+				outline: none;
+			}
+
+			.cke_image_resizer_wrapper {
+				outline: 2px solid #ace;
+			}
+
+			img[class="cke_widget_element"] {
+				outline: 2px solid #ace;
+			}
+		}
+
+		.cke_widget_wrapper:hover {
+			.cke_widget_element {
+				outline: none;
+			}
+		}
+
 		.lfr-source-editor {
 			display: none;
 		}
