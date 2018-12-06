@@ -3,8 +3,8 @@ AUI.add(
 	function(A) {
 		var isArray = Array.isArray;
 
-		var langId = Liferay.ThemeDisplay.getLanguageId().replace('_', '-');
-		var customDateFormat = A.Intl.get('datatype-date-format', 'x', langId);
+		var languageId = Liferay.ThemeDisplay.getLanguageId().replace('_', '-');
+		var customDateFormat = A.Intl.get('datatype-date-format', 'x', languageId);
 		var dateFormat = Liferay.AUI.getDateFormat();
 
 		if (customDateFormat) {
@@ -13,12 +13,15 @@ AUI.add(
 
 		var dateDelimiter = '/';
 		var endDelimiter = false;
+
 		if (dateFormat.indexOf('.') != -1) {
 			dateDelimiter = '.';
+
 			if (dateFormat.lastIndexOf('.') == dateFormat.length - 1) {
 				endDelimiter = true;
 			}
 		}
+
 		if (dateFormat.indexOf('-') != -1) {
 			dateDelimiter = '-';
 		}
