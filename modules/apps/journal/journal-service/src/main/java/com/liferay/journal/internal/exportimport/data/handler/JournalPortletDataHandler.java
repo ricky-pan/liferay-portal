@@ -65,7 +65,9 @@ import com.liferay.portal.kernel.util.Portal;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.xml.Element;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import javax.portlet.PortletPreferences;
 
@@ -380,6 +382,24 @@ public class JournalPortletDataHandler extends BasePortletDataHandler {
 		}
 
 		if (portletDataContext.getBooleanParameter(NAMESPACE, "web-content")) {
+			for (Element articleElement : articleElements) {
+				StagedModelDataHandlerUtil.importStagedModel(
+					portletDataContext, articleElement);
+			}
+
+			Set<String> portletPrimaryKeys =
+				portletDataContext.getPrimaryKeys();
+
+			Iterator<String> primaryKeyIterator = portletPrimaryKeys.iterator();
+
+			while (primaryKeyIterator.hasNext()) {
+				String currPrimaryKey = primaryKeyIterator.next();
+
+				if (currPrimaryKey.contains("JournalArticle")) {
+					primaryKeyIterator.remove();
+				}
+			}
+
 			for (Element articleElement : articleElements) {
 				StagedModelDataHandlerUtil.importStagedModel(
 					portletDataContext, articleElement);
