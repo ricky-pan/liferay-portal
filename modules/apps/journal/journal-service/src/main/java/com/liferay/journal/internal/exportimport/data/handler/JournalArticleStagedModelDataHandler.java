@@ -576,11 +576,6 @@ public class JournalArticleStagedModelDataHandler
 
 		String content = article.getContent();
 
-		content =
-			_journalArticleExportImportContentProcessor.
-				replaceImportContentReferences(
-					portletDataContext, article, content);
-
 		article.setContent(content);
 
 		String newContent = _journalCreationStrategy.getTransformedContent(
@@ -939,6 +934,13 @@ public class JournalArticleStagedModelDataHandler
 
 			ServiceContextThreadLocal.pushServiceContext(serviceContext);
 
+			Map<Long, Long> articlePrimaryKeys =
+				(Map<Long, Long>)portletDataContext.getNewPrimaryKeysMap(
+					JournalArticle.class + ".primaryKey");
+
+			articlePrimaryKeys.put(
+				article.getPrimaryKey(), importedArticle.getPrimaryKey());
+
 			try {
 
 				// Clean up initial publication
@@ -964,12 +966,28 @@ public class JournalArticleStagedModelDataHandler
 						article.getArticleId(), importedArticle.getArticleId());
 				}
 
-				Map<Long, Long> articlePrimaryKeys =
-					(Map<Long, Long>)portletDataContext.getNewPrimaryKeysMap(
-						JournalArticle.class + ".primaryKey");
+				content =
+					_journalArticleExportImportContentProcessor.
+						replaceImportContentReferences(
+							portletDataContext, article, content);
 
-				articlePrimaryKeys.put(
-					article.getPrimaryKey(), importedArticle.getPrimaryKey());
+				article.setContent(content);
+
+				importedArticle = _journalArticleLocalService.updateArticle(
+					userId, importedArticle.getGroupId(), folderId,
+					importedArticle.getArticleId(), article.getVersion(),
+					article.getTitleMap(), article.getDescriptionMap(),
+					article.getFriendlyURLMap(), article.getContent(),
+					parentDDMStructureKey, parentDDMTemplateKey,
+					article.getLayoutUuid(), displayDateMonth, displayDateDay,
+					displayDateYear, displayDateHour, displayDateMinute,
+					expirationDateMonth, expirationDateDay, expirationDateYear,
+					expirationDateHour, expirationDateMinute, neverExpire,
+					reviewDateMonth, reviewDateDay, reviewDateYear,
+					reviewDateHour, reviewDateMinute, neverReview,
+					article.isIndexable(), article.isSmallImage(),
+					article.getSmallImageURL(), smallFile, null, articleURL,
+					serviceContext);
 
 				_importAssetDisplayPage(
 					portletDataContext, article, importedArticle);
